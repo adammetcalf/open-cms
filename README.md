@@ -4,12 +4,18 @@ Open Source Case Management System
 
 ## How to Contribute
 ### Fork the repo
-Navigate to the Mastek4Good repo and select `Fork`:
+Navigate to the Mastek4Good repo and select `Fork`
+:
 ![Fork button](docs/images/Fork.png)
 
 
+
+
 This provides a copy of the repo in your github account:
+
 ![Forked repository](docs/images/ForkedRepo.png)
+
+
 
 ### Clone the Repo
 
@@ -70,13 +76,22 @@ Note: There are ways to reduce the number of commands required (for example by c
 ### Pull Request
 
 If you are quick, you will see a nice banner that directly leads to a pull request creation:
+
 ![PR Banner](docs/images/PullRequest.png)
 
+
+
 Otherwise, you can simply create your own in the `Pull requests` tab:
+
 ![PR Tab](docs/images/PRTab.png)
 
+
+
 Ensure that you select the appropriate merge:
+
 ![PR branches](docs/images/PRbranches.png)
+
+
 
 Note that I am creating a pull request from the AdamDev branch of my fork into the main branch of the Mastek4Good repo. In the future, it may be the case that there will be a specific branch that you should select as the target. Ensure that you have written a useful message into the pull request.
 After someone has checked the pull request it may be merged by an admin, or changes will be requested after review.
