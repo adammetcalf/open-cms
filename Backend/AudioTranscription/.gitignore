@@ -1,0 +1,7 @@
+# This .gitignore applies only to the AudioTranscription directory and its subdirectories.
+
+# ignore build dir
+build/
+
+# ignore models dir
+models/
