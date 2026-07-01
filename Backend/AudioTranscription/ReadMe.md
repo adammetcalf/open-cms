@@ -13,6 +13,11 @@ whisper.cpp has been added as a git submodule.
 
 This ensures that everyone builds from the same dependency version. Whisper has been placed into the dir 'third_party/whisper.cpp/
 
+## dependencies
+MP4 input requires FFmpeg development libraries. I installed this on my system in vcpkg:
+```
+vcpkg install ffmpeg:x64-windows
+```
 
 ## setup scripts
 Because the models may be large, and already exist in someone else's repo I have not directly downloaded and included them in this project. Instead I have included a powershell script (for windows) `.\setup.ps1` and a shell script (for linux) `.\setup.sh` that will download the defined model. This keeps the repo lightweight.
@@ -24,5 +29,21 @@ These scripts perfrom the following:
 4. copy this model into the dir models/
 
 After running the script the project is ready to build without further configuration.
+
+Temporarily allow scripts in vscode terminal:
+```
+Set-ExecutionPolicy -Scope Process Bypass
+```
+
+Download the model:
+```
+\.setup.ps1
+```
+
+## Building the dll
+```
+cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=C:/Workspace/vcpkg/scripts/buildsystems/vcpkg.cmake
+cmake --build build --config Release
+```
 
 

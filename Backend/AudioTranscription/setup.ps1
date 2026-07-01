@@ -27,13 +27,13 @@ if (-not (Test-Path $LocalModelPath)) {
 
     Push-Location $WhisperDir
     try {
-        .\models\download-ggml-model.ps1 $ModelName
+        .\models\download-ggml-model.cmd $ModelName
     }
     finally {
         Pop-Location
     }
 
-    $DownloadedModelPath = Join-Path $WhisperDir "models\ggml-$ModelName.bin"
+    $DownloadedModelPath = Join-Path $WhisperDir "ggml-$ModelName.bin"
 
     if (-not (Test-Path $DownloadedModelPath)) {
         throw "Expected downloaded model not found: $DownloadedModelPath"
