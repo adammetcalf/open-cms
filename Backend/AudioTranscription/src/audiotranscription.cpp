@@ -68,7 +68,7 @@ AUDIOTRANSCRIPTION_API int TranscribeFile(
     try
     {
         std::vector<float> pcm =
-            AudioTranscription::DecodeAudioToMono16k(inputFile);
+            decode::DecodeAudioToMono16k(inputFile);
 
         if (pcm.empty())
         {

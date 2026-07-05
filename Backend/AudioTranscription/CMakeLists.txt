@@ -5,7 +5,7 @@ project(AudioTranscription LANGUAGES C CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(unofficial-ffmpeg CONFIG REQUIRED)
+find_package(FFMPEG REQUIRED)
 
 add_subdirectory(third_party/whisper.cpp)
 
@@ -22,15 +22,14 @@ target_compile_definitions(AudioTranscription
 target_include_directories(AudioTranscription
     PUBLIC
         ${CMAKE_CURRENT_SOURCE_DIR}/include
+    PRIVATE
+        ${FFMPEG_INCLUDE_DIRS}
 )
 
 target_link_libraries(AudioTranscription
     PRIVATE
         whisper
-        unofficial::ffmpeg::avformat
-        unofficial::ffmpeg::avcodec
-        unofficial::ffmpeg::avutil
-        unofficial::ffmpeg::swresample
+        ${FFMPEG_LIBRARIES}
 )
 
 if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/models/ggml-tiny.bin")

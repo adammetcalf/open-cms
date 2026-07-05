@@ -63,7 +63,7 @@ namespace
         }
         else
         {
-            av_channel_layout_default(&layout, codecContext->channels);
+            throw std::runtime_error("Decoder did not provide a valid channel layout");
         }
 
         return layout;
