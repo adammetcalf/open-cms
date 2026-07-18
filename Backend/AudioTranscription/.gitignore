@@ -1,7 +1,31 @@
 # This .gitignore applies only to the AudioTranscription directory and its subdirectories.
 
-# ignore build dir
+# Build output
 build/
 
-# ignore models dir
+# Downloaded Whisper models (not committed)
 models/
+
+# Python virtual environment
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python test/cache files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+
+# exectuable files
+*.exe
