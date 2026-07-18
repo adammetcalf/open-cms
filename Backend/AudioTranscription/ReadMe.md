@@ -26,7 +26,7 @@ Currently there are no python requirements. However, in case there exist some in
 pip install -r requirements.txt
 ```
 
-## dependencies
+## Dependencies
 - Whisper
 - FFmpeg
 
@@ -48,7 +48,7 @@ On Windows:
 vcpkg install ffmpeg:x64-windows
 ```
 
-## setup scripts
+## Setup scripts
 Because the models may be large, and already exist in someone else's repo I have not directly downloaded and included them in this project. Instead I have included a powershell script (for windows) `.\setup.ps1` and a shell script (for linux) `.\setup.sh` that will download the defined model. This keeps this repo lightweight.
 
 These scripts perfrom the following:
@@ -77,4 +77,13 @@ cmake -B build -S . -DCMAKE_TOOLCHAIN_FILE=C:/Workspace/vcpkg/scripts/buildsyste
 cmake --build build --config Release
 ```
 
+
+
+#TODO
+
+1. Find a way to automatically install for somehwere ffprobe.exe in Application/windows (too big to push to git).
+2. Simliarly for any model placed into Applcation/models
+3. Build all for Linux.
+4. Documentation completion.
+5. Tidy up readme. Split into 'using the delivery 'Application'' and 'building from source', since these are different use cases for different people.
 
